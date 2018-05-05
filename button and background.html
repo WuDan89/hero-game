@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>按钮及背景切换</title>
+		<link rel="stylesheet" href="css/style.css">
+		<style>
+			div{
+				width:50px;
+				height:50px;
+				line-height: 50px;
+				text-align: center;
+				background: red;
+				display:inline-block;
+				border-radius: 50%;
+				margin-top:50px;
+				margin-left:50px;
+			}
+		</style>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script>
+			$(function(){
+				
+				/*$("#success").click(function(){
+					var num = parseInt(Math.random()*20+1);
+					$("body").removeClass().addClass("bg"+num);;
+					
+				})
+				$("#fail").click(function(){
+					var num = parseInt(Math.random()*20+1);
+					$("body").removeClass().addClass("bg"+num);;
+				})*/
+				// 优化
+				$("#success").click(function(){
+					change();
+				})
+
+				$("#fail").click(function(){
+					change();
+				})
+
+
+				function change(){
+					var num = parseInt(Math.random()*20+1);
+					$("body").removeClass().addClass("bg"+num);;
+				}
+
+
+			})
+
+
+
+		</script>
+	</head>
+	<body>
+		<div id="success">成功</div>
+		<div id="fail">失败</div>
+	
+	</body>
+</html>
